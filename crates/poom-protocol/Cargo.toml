@@ -1,0 +1,22 @@
+[package]
+name = "poom-protocol"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "Binary wire framing and protocol codec for Poom"
+
+[dependencies]
+poom-types = { path = "../poom-types" }
+bytes.workspace = true
+postcard.workspace = true
+serde.workspace = true
+thiserror.workspace = true
+
+[dev-dependencies]
+proptest.workspace = true
+criterion.workspace = true
+
+[[bench]]
+name = "protocol_bench"
+harness = false
