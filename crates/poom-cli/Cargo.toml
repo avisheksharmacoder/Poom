@@ -1,0 +1,33 @@
+[package]
+name = "poom-cli"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[[bin]]
+name = "poom"
+path = "src/main.rs"
+
+[dependencies]
+poom-types = { path = "../poom-types" }
+poom-protocol = { path = "../poom-protocol" }
+poom-transport = { path = "../poom-transport" }
+poom-storage = { path = "../poom-storage" }
+poom-daemon = { path = "../poom-daemon" }
+poom-ui = { path = "../poom-ui" }
+clap = { version = "4.5", features = ["derive", "env"] }
+similar = { version = "2.6", features = ["inline"] }
+tokio = { workspace = true }
+redb = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+smol_str = { workspace = true }
+uuid = { workspace = true }
+postcard = { workspace = true }
+chrono = { version = "0.4", default-features = false, features = ["clock", "std"] }
+thiserror = { workspace = true }
+
+[dev-dependencies]
+tempfile = "3.10"
