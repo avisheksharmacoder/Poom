@@ -1,0 +1,23 @@
+[package]
+name = "poom-storage"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "Embedded zero-copy ACID B-Tree storage engine on redb for Poom"
+
+[dependencies]
+poom-types = { path = "../poom-types" }
+postcard.workspace = true
+redb.workspace = true
+tokio.workspace = true
+thiserror.workspace = true
+smol_str.workspace = true
+
+[dev-dependencies]
+tempfile = "3.10"
+criterion.workspace = true
+
+[[bench]]
+name = "storage_bench"
+harness = false
