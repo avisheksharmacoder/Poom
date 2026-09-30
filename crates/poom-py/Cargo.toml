@@ -1,0 +1,29 @@
+[package]
+name = "poom-py"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "PyO3 native C-extension bridge for Poom"
+
+[lib]
+name = "poom_native"
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+poom-types = { path = "../poom-types" }
+poom-protocol = { path = "../poom-protocol" }
+poom-transport = { path = "../poom-transport" }
+pyo3 = { workspace = true }
+crossbeam-channel.workspace = true
+bytes.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
+smol_str.workspace = true
+
+[features]
+default = ["extension-module"]
+extension-module = ["pyo3/extension-module"]
+
+[dev-dependencies]
+tempfile = "3.10"
