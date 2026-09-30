@@ -1,0 +1,21 @@
+[package]
+name = "poom-ui"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+poom-types = { path = "../poom-types" }
+poom-storage = { path = "../poom-storage" }
+poom-daemon = { path = "../poom-daemon" }
+uuid = { workspace = true }
+smol_str = { workspace = true }
+tokio = { workspace = true }
+thiserror = { workspace = true }
+redb = { workspace = true }
+futures-util = { workspace = true }
+serde_json = { workspace = true }
+chrono = { version = "0.4", default-features = false, features = ["clock", "std"] }
+iced = { version = "0.13", default-features = false, features = ["wgpu", "tiny-skia", "canvas", "tokio", "auto-detect-theme", "fira-sans"] }
