@@ -1,0 +1,23 @@
+[package]
+name = "poom-daemon"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "High-performance standalone ingestion daemon and metrics enrichment engine for Poom"
+
+[dependencies]
+poom-types = { path = "../poom-types" }
+poom-protocol = { path = "../poom-protocol" }
+poom-transport = { path = "../poom-transport" }
+poom-storage = { path = "../poom-storage" }
+tokio.workspace = true
+tokio-util.workspace = true
+futures-util.workspace = true
+thiserror.workspace = true
+smol_str.workspace = true
+serde.workspace = true
+tiktoken-rs.workspace = true
+
+[dev-dependencies]
+tempfile = "3.10"
