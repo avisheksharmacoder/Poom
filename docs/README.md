@@ -3,6 +3,8 @@
 > **High-performance, local-first, zero-friction LLM & AI agent observability studio built entirely in pure Rust.**
 > No Docker. No Postgres. No ClickHouse. No cloud accounts. Zero cognitive overhead.
 
+![Poom Observability Studio](../images/post_request1.png)
+
 ---
 
 ## 1. What is Poom?
@@ -329,3 +331,22 @@ wrk -t2 -c10 -d10s --latency -s python/fastapi/load_test.lua http://127.0.0.1:80
 2. **Interactive Waterfall**: Full hierarchical execution trees appear dynamically on the left.
 3. **Inspector Panel**: Click any span to inspect exact nanosecond latency, model tokens, financial costs, and stack traces on errors.
 4. **Settings Panel**: Click **`⚙ Settings`** at the bottom left to change UI font scaling, toggle Light/Dark mode, or copy integration snippets.
+
+---
+
+### Studio Interface & Screenshots
+
+#### 1. Real-Time Trace Waterfall & Span Inspector
+Interactive 2D Gantt execution hierarchy showing multi-step agent workflows, vector search tooling, and LLM inference calls with latency breakdown, token consumption, and cost calculations:
+
+![Poom Trace Execution Waterfall & Span Inspector](../images/post_request1.png)
+
+#### 2. Error Diagnostics & Python Stack Traceback
+Instant error isolation with trace status filters (`Errors Only`), highlighted error badges, and full exception traceback details:
+
+![Poom Error Diagnostics & Exception Inspection](../images/error_request.png)
+
+#### 3. Studio Settings & Dynamic Font Scaling
+Easily customize your studio environment with dynamic font scaling (70%–160%), dark/light themes, and quick copy-paste FastAPI integration templates:
+
+![Poom Studio Settings & UI Customization](../images/Settings.png)
